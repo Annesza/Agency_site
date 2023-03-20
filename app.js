@@ -1,6 +1,12 @@
 const hamburger = document.querySelector('.hamburger')
-const hamburgerBar = document.querySelectorAll('.hamburger__bar')
+const hamburgerBarList = document.querySelectorAll('.hamburger__bar')
+const list = document.querySelector('.list')
+const nav = document.querySelector('.nav')
+hamburger.addEventListener('click', () => {
+    hamburgerBarList.forEach(bar => {
+        bar.classList.toggle('active')
+    })
+    list.classList.toggle('active')
+    nav.classList.toggle('active')
 
-hamburger.addEventListener('click', ()=>{
-    hamburger.classList.toggle('active')
 })
