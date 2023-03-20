@@ -1,0 +1,11 @@
+.title {
+  font-weight: 300;
+  font-size: 80px;
+  margin-left: 140px;
+  color: $black;
+  &__word {
+    font-weight: 400;
+    font-style: italic;
+    color: $blue-btn;
+  }
+}
