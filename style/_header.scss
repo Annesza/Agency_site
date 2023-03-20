@@ -4,3 +4,16 @@
   background-color: $grey-bg;
   border-radius: 20px;
 }
+
+.logo {
+  width: 200px;
+  height: 40px;
+  &__link {
+    display: block;
+    line-height: 100%;
+    font-size: 0;
+  }
+  &__img {
+    width: 100%;
+  }
+}
