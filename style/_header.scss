@@ -2,7 +2,7 @@
   width: 100%;
   height: calc(100vh - 30px);
   background-color: $white;
-  border-radius: 20px;
+  border-radius: 41px;
   box-sizing: content-box;
 }
 
@@ -29,6 +29,33 @@
 }
 
 .list {
+  margin: 0;
+  padding: 0;
+  @include center(row, center, center);
+  list-style: none;
+  gap: 10px;
+  &__item {
+    padding: 15px;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $black;
+    font-weight: 500;
+    font-size: 19px;
+  }
+  &__btn {
+    width: 162px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    border-radius: 24px;
+    margin-left: 25px;
+    background: $blue-btn;
+    color: $white;
+  }
   margin: 0;
   padding: 0;
   @include center(row, center, center);
@@ -112,7 +139,7 @@
   .nav {
     max-width: 100%;
     padding: 0 10px 0 10px;
-    border-radius: 20px;
+    border-radius: 41px;
     margin: 0 5px;
     position: relative;
     flex-wrap: wrap;

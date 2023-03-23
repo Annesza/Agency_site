@@ -9,8 +9,7 @@
     letter-spacing: 0.05em;
     color: white;
     &__part {
-      font-weight: 500;
-      font-style: italic;
+      @include bold($white, 500, italic);
     }
   }
   &__list {
@@ -37,4 +36,20 @@
 
 .logo--footer {
   padding: 30px;
+}
+
+@media (orientation: landscape) and (max-width: $tablet), (max-width: $tablet) {
+  .footer {
+    &__title {
+      font-size: 60px;
+    }
+    &__list {
+      flex-wrap: wrap;
+      &__item {
+        &:nth-child(5) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
