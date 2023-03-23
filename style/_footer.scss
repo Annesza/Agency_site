@@ -9,8 +9,7 @@
     letter-spacing: 0.05em;
     color: white;
     &__part {
-      font-weight: 500;
-      font-style: italic;
+      @include bold($white, 500, italic);
     }
   }
   &__list {
