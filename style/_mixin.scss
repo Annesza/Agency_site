@@ -4,3 +4,9 @@
   justify-content: $content;
   align-items: $items;
 }
+
+@mixin bold($color, $weight, $style) {
+  color: $color;
+  font-weight: $weight;
+  font-style: $style;
+}

@@ -1,0 +1,23 @@
+.analitic {
+  &__description {
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    border-radius: 40px;
+    &-p {
+      font-weight: 300;
+      font-size: 16px;
+      text-align: justify;
+      width: 50%;
+      padding: 70px 50px 0 50px;
+    }
+    &-icon {
+      padding: 50px;
+    }
+    &-image {
+      position: absolute;
+      left: 50px;
+      bottom: 10px;
+    }
+  }
+}
