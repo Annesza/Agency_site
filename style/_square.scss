@@ -10,21 +10,14 @@
   &__icon {
     float: right;
     padding: 40px;
-    // &:hover ~ .square__description .square__info {
-    //   opacity: 1;
-    //   font-size: 15px;
-    // }
-    //~ oznacza selektor siostrzany, co oznacza, że styl zostanie zastosowany na elementach, które są rodzeństwem elementu .square.
   }
   &__description {
     width: 100%;
-    // height: 125%;
     aspect-ratio: 1/1;
     position: relative;
     border-radius: 40px;
     background-color: $pure-white;
     transform: translateX(50%);
-    // transform: translateX(30%);
   }
   &__text {
     margin: 0;
