@@ -9,15 +9,12 @@ hamburger.addEventListener('click', () => {
     list.classList.toggle('list--open')
 })
 
-const square = document.querySelector('.square__description')
+const square = document.querySelectorAll('.square__element')
 const icon = document.querySelector('.square__icon')
-const info = document.querySelector('.square__info')
-const wrapper = document.querySelector('.square__wrapper')
-
 
 icon.addEventListener('click', () => {
-    icon.classList.toggle('square__icon--open')
-    square.classList.toggle('square__description--open')
-    wrapper.classList.toggle('square__wrapper--open')
-    info.classList.toggle('square__info--open')
+    square.forEach((element) => {
+        element.classList.toggle('open')
+    })
+
 })
