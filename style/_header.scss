@@ -141,6 +141,7 @@
   .nav {
     max-width: 100%;
     padding: 10px 15px 0 15px;
+    z-index: 1;
     @include devices(mobile) {
       padding: 0 10px 0 10px;
     }

@@ -1,26 +1,45 @@
 @mixin center($direction, $content, $items) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $content;
-  align-items: $items;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
 }
 
 @mixin bold($color, $weight, $style) {
-  color: $color;
-  font-weight: $weight;
-  font-style: $style;
+    color: $color;
+    font-weight: $weight;
+    font-style: $style;
 }
 
 @mixin devices($breakpoint) {
-  @if $breakpoint == tablet {
-    @media only screen and (max-width: $tablet) {
-      @content;
+    @if $breakpoint==tablet {
+        @media only screen and (max-width: $tablet) {
+            @content;
+        }
     }
-  }
-
-  @if $breakpoint == mobile {
-    @media only screen and (max-width: $mobile) {
-      @content;
+    @if $breakpoint==lTablet {
+        @media only screen and (max-width: $lTablet) {
+            @content;
+        }
     }
-  }
+    @if $breakpoint==mobile {
+        @media only screen and (max-width: $mobile) {
+            @content;
+        }
+    }
+    @if $breakpoint==sDesctop {
+        @media only screen and (max-width: $sDesctop) {
+            @content;
+        }
+    }
+    @if $breakpoint==lMobile {
+        @media only screen and (max-width: $lMobile) {
+            @content;
+        }
+    }
+    @if $breakpoint==Desctop {
+        @media only screen and (max-width: $Desctop) {
+            @content;
+        }
+    }
 }
