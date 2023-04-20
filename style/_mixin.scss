@@ -23,4 +23,19 @@
       @content;
     }
   }
+  @if $breakpoint == sDesctop {
+    @media only screen and (max-width: $sDesctop) {
+      @content;
+    }
+  }
+  @if $breakpoint == xsDesctop {
+    @media only screen and (max-width: $xsDesctop) {
+      @content;
+    }
+  }
+  @if $breakpoint == lMobile {
+    @media only screen and (max-width: $lMobile) {
+      @content;
+    }
+  }
 }
