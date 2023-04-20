@@ -4,9 +4,13 @@
 @import "header";
 @import "square";
 @import "services";
+@import "reminder";
+@import "analitic";
 @import "footer";
 .website {
   padding: 15px;
   max-width: 1440px;
   margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
 }
