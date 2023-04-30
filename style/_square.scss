@@ -8,13 +8,17 @@
     width: 60%;
     max-width: 800px;
     aspect-ratio: 1/1;
+    transition: 0.3s ease;
     &__icon {
+        aspect-ratio: 1/1;
+        width: 10%;
+        max-width: 70px;
         float: right;
         padding: 40px;
         cursor: pointer;
+        transition: 0.3s ease;
         &.open {
             transform: rotate(180deg);
-            transition: 0.3s ease;
         }
     }
     &__description {
@@ -25,8 +29,8 @@
         border-radius: 40px;
         background-color: $pure-white;
         transform: translateX(50%) scale(1);
+        transition: 0.3s ease;
         &.open {
-            transition: 0.3s linear;
             transform: translateX(50%) scale(1.1);
         }
     }
@@ -36,9 +40,13 @@
     &__wrapper {
         padding: 80px 50px;
         font-weight: 300;
-        font-size: 80px;
+        @include fluid-type(320px,
+        1400px,
+        35px,
+        80px);
+        transition: 0.3s ease;
         &.open {
-            padding: 80px 50px 20px 50px;
+            padding-bottom: 20px;
         }
     }
     &__text {
@@ -56,29 +64,36 @@
     &__info {
         opacity: 0;
         font-size: 0;
+        transition: 0.3s ease;
+        padding: 0 50px;
+        &-p {
+            @include fluid-type(320px,
+            1400px,
+            8px,
+            15px);
+            text-align: justify;
+        }
+        &-btn {
+            @include fluid-type(320px,
+            1400px,
+            8px,
+            16px);
+            padding: 15px 50px;
+            border: none;
+            border-radius: 24px;
+            background-color: $blue-btn;
+            color: $pure-white;
+        }
         &.open {
             opacity: 1;
-            padding: 0 50px;
-            width: 80%;
-            .square__info-p {
-                font-size: 15px;
-                text-align: justify;
-                transition: 0.3s linear;
-            }
-            .square__info-btn {
-                font-size: 16px;
-                padding: 15px 50px;
-                border: none;
-                border-radius: 24px;
-                background-color: $blue-btn;
-                color: $pure-white;
-                transition: 0.6s linear;
-            }
         }
     }
     &__footer {
         font-weight: 300;
-        font-size: 14px;
+        @include fluid-type(320px,
+        1400px,
+        8px,
+        14px);
         width: 90%;
         bottom: 50px;
         left: 30px;
@@ -100,7 +115,10 @@
             none);
             font-style: italic;
             font-weight: 400;
-            font-size: 20px;
+            @include fluid-type(320px,
+            1400px,
+            8px,
+            20px);
         }
     }
 }
@@ -111,16 +129,6 @@
         &__description {
             aspect-ratio: 1/1.15;
         }
-        &__wrapper {
-            font-size: 70px;
-            &--open {
-                padding: 60px 40px 20px 40px;
-            }
-        }
-        &__info--open {
-            padding: 0 40px;
-            font-size: 12px;
-        }
     }
 }
 
@@ -129,6 +137,14 @@
         aspect-ratio: 1/1.2;
         &__description {
             aspect-ratio: 1/1.2;
+        }
+        &__wrapper {
+            padding: 60px 50px;
+        }
+        &__info {
+            &-btn {
+                padding: 12px 35px;
+            }
         }
     }
 }
@@ -148,18 +164,20 @@
         &__description {
             aspect-ratio: 1/1.7;
         }
-        &__icon {
-            padding: 30px;
+        &__info {
+            padding: 0 30px;
         }
         &__wrapper {
-            font-size: 65px;
-            &--open {
-                padding: 60px 40px 20px 40px;
-            }
+            padding: 40px 30px;
         }
-        &__info--open {
-            padding: 0 40px;
-            font-size: 15px;
+        &__footer {
+            width: 90%;
+            left: 10px;
+            &-top {
+                &-line {
+                    width: 60%;
+                }
+            }
         }
     }
 }
@@ -173,37 +191,23 @@
             height: 100%;
             transform: translate(20%);
             aspect-ratio: 1/2.1;
-            &--open {
+            &.open {
                 transform: translateX(20%) scale(1.1);
             }
         }
-        &__icon {
-            padding: 20px;
-        }
-        &__wrapper {
-            font-size: 55px;
-            &--open {
-                padding: 60px 40px 20px 40px;
+        &__info {
+            padding: 0 30px;
+            &-btn {
+                padding: 10px 30px;
             }
         }
-        &__info--open {
-            padding: 0 40px;
-            font-size: 12px;
+        &__wrapper {
+            padding: 30px 30px;
         }
     }
 }
 
-@include devices(mobile) {
-    .square {
-        &__wrapper {
-            font-size: 50px;
-            &--open {
-                padding: 60px 35px 20px 35px;
-            }
-        }
-        &__info--open {
-            padding: 0 35px;
-            font-size: 10px;
-        }
-    }
-}
+// @include devices(mobile) {
+//     .square {
+//     }
+// }
